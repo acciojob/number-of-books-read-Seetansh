@@ -1,23 +1,22 @@
 const library = [
   {
-    author: "Bill Gates",
     title: "The Road Ahead",
-    readingStatus: true,
+    author: "Bill Gates",
+    readingStatus: true
   },
   {
-    author: "Steve Jobs",
     title: "Walter Isaacson",
-    readingStatus: true,
+    author: "Steve Jobs",
+    readingStatus: true
   },
   {
+    title: "Mockingjay",
     author: "Suzanne Collins",
-    title: "Mockingjay: The Final Book of The Hunger Games",
-    readingStatus: false,
-  },
+    readingStatus: false
+  }
 ];
 
-const numberOfBooksRead = () => {
-  // write your code here
-};
-
-// Do not change the code below
+function numberOfBooksRead() {
+  return library.filter(book => book.readingStatus).length;
+}
+console.log(numberOfBooksRead());
